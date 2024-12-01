@@ -26,3 +26,7 @@ Modify the insert method: The insert method should check for overlaps before ins
 Test thoroughly: Test with various scenarios to ensure the corrected code accurately handles overlapping and non-overlapping bookings.
 
 line-by-line explanation of changes:
+
+Line 20-21 (Added overlaps method): This new method efficiently checks if two intervals (self and other) overlap. This is crucial for accurately detecting conflicts.
+
+Line 8-13 (Modified insert method): The initial if/elif structure is replaced. The code now first calls overlaps to check for conflicts. Only if no conflict exists does it proceed to insert the node into the left or right subtree based on the start time.
